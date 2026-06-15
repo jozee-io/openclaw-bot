@@ -1,5 +1,4 @@
-app = "my-openclaw-bot"
-primary_region = "iad"
+
 
 [build]
   dockerfile = "Dockerfile"
