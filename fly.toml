@@ -1,0 +1,17 @@
+app = "my-openclaw-bot"
+primary_region = "iad"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[mounts]
+  source = "openclaw_data"
+  destination = "/root/.openclaw"
+
+[http_service]
+  internal_port = 19001
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
